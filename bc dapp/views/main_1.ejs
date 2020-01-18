@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  
+  <% include partials/head.ejs %>
+
+</head>
+<body>
+  
+<br>
+
+<!-- INITIAL SCREEN -->
+<div id="initID">
+    <div id="loaderID" class="loader"></div>
+    <ul id="initialStatusID"></ul>
+</div>
+
+<!-- MAIN SCREEN AFTER METAMASK INFO LOADED -->
+<div id="main" class="container-fluid">
+    <div></div>
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color:aliceblue;">                
+            <h5 class="text-center">Proof of Existence</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color:darkblue;">                
+            <% include partials/components/landlist.ejs %>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-8 offset-1" style="background-color:rgb(172, 215, 255); height:175px;">
+            <% include partials/components/operations.ejs %>
+        </div>
+        <div class="col-2" style="background-color:rgb(172, 215, 255); height:175px;">
+            <br>
+            <div id="loaderID2" class="loader"></div>
+        </div>        
+    </div>
+    
+    <div class="row">
+        <div class="col-10 offset-1" style="background-color:darkblue; height:200px;">
+            <% include partials/components/status.ejs %>
+            <div class="row">
+            <p class="col-6"><small><a href="" target="_blank"></a></small></p>
+            <p class="col-6 text-right"><small><a href="" target="_blank"></a></small></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<% include partials/jsincludes.ejs %>
+
+<script src="/js/arrive.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/loadLands.js"></script>
+<script src="/js/operations.js"></script>
+</body>
+</html>
